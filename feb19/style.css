@@ -1,0 +1,136 @@
+*
+{
+margin: 0%;
+padding: 0%;
+}
+.hello {
+  opacity: 0;
+
+  animation: moving 0.4s ease-out forwards;
+  
+}
+
+
+.bhaag{
+    animation: blur 0s ease-out forwards;
+    animation-delay: 2s;
+}
+.lodding-page{
+    animation: pooja 0.6s ease-out forwards;
+    animation-delay: 2s;
+    
+}
+
+@keyframes moving {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    scale: 1;
+    opacity: 1;
+  }
+}
+.hi {
+  opacity: 0;
+  scale: 0;
+  animation-delay: 0s;
+}
+.this {
+  opacity: 0;
+  scale: 0;
+  animation-delay: 0.2s;
+}
+.is {
+  opacity: 0;
+  scale: 0;
+
+  animation-delay: 0.4s;
+}
+.me {
+  opacity: 0;
+  scale: 0;
+
+  animation-delay: 0.6s;
+}
+.and {
+  opacity: 0;
+  scale: 0;
+
+  animation-delay: 0.8s;
+}
+.you {
+  opacity: 0;
+  scale: 0;
+
+  animation-delay: 1s;
+}
+
+@keyframes blur {
+
+100%{
+    opacity: 0; 
+}
+}
+
+@keyframes pooja {
+    0%{
+        transform: translateY(0px) ;
+    }
+    100%{
+        transform: translateY(-1100px) ;
+    }
+    
+}
+
+
+.box{
+    margin-top: 25px;
+    padding: 10px;
+   
+}
+.box-2{
+    margin-top: 30px;
+}
+.box-3{
+    margin-top:50px ;
+}
+.icon:hover {
+ animation: rotate 1s ease-out 0s;
+}
+
+
+@keyframes rotate {
+    0%{
+        scale: 0.9;
+        transform: rotate(360deg);
+    }
+    100%{
+        scale: 1;
+        transform: rotate(-360deg);
+    }
+}
+
+.photo{
+    margin-top: 20px;
+    
+}
+.img{
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    height: 600px;
+}
+.folder{
+    /* position: fixed; */
+    margin-top: 70px;
+
+}
+
+.menu{
+    padding: 5px;
+}
+
