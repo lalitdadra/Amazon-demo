@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nav bar</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+    <ul class="header flex bg-black text-white duration-300 ease-out  justify-center items-center ">
+        <li class="header-home  w-full hover:bg-white hover:text-black transition-all duration-500 h-10">Home</li>
+        <li class="header-home  w-full hover:bg-white hover:text-black transition-all duration-500 h-10">Products</li>
+        <li class="header-home  w-full hover:bg-white hover:text-black transition-all duration-500 h-10">Contact</li>
+        <li
+            class="header-home  w-full hover:bg-white hover:text-black transition-all duration-500 h-10 relative group ">
+            Services
+            <ul class="inner-header bg-black text-white  hidden group-hover:block absolute top-10 left-0 w-full ">
+                <li class="inner-header-services-1 hover:bg-white hover:text-black transition-all duration-500">Web
+                    Design</li>
+                <li class="inner-header-services-2 hover:bg-white hover:text-black transition-all duration-500">SEO</li>
+                <li class="inner-header-services-3 hover:bg-white hover:text-black transition-all duration-500">
+                    Marketing</li>
+            </ul>
+        </li>
+    </ul>
+</body>
+
+</html>

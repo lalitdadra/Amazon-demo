@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Clone</title>
+    <script src="https://kit.fontawesome.com/319fa7ba60.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-black">
+    <!-- header -->
+    <div class=" gap-6 p-8 bg-black text-white w-full flex items-center ">
+        <i class="fa-brands fa-spotify text-4xl absolute left-4 absolute left-5"></i>
+        <i class="fa-regular fa-house text-1xl bg-gray-600/50 rounded-full ps-4 pt-4 pb-4 pe-8  absolute left-160"></i>
+        <div
+            class="search-bar absolute left-175 w-115 bg-gray-600/50 rounded-full ps-3 py-3 flex items-center gap-95  text-2xl text-white/70">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <h1 class="absolute ps-14 text-sm flex ">What do you want to play?</h1>
+            <i class="fa-brands fa-edge"></i>
+        </div>
+        <ul class="absolute left-320 text-1xl text-white/70 flex gap-3">
+            <li>Premium</li>
+            <li>Support</li>
+            <li>Download</li>
+            <li class="text-white">|</li>
+        </ul>
+        <ul class="absolute left-400 text-1xl text-white/70 flex gap-3 align-center justify-center">
+            <li><i class="fa-solid fa-download"></i> Install App</li>
+            <li>Sign up</li>
+        </ul>
+    </div>
+    <div>
+        <ul>
+            <li class="bg-white text-black rounded-full px-7 absolute top-1.5 left-450 p-3.5 w-25">Log in</li>
+        </ul>
+    </div>
+
+    <!-- side bar -->
+
+    <div>
+        <div class="flex top-18 w-105 h-175 bg-white/5 text-white pt-5 ps-5 fixed rounded-xl">
+            <div>
+                Your Library
+            </div>
+        </div>
+        <div class="bg-white/8 w-25 h-9 absolute left-75 top-22 rounded-full text-white">
+            <div class="absolute  left-4 text-2xl text-white/50">
+                +
+            </div>
+            <div class="absolute top-2 left-10 text-sm ">
+                Create
+            </div>
+        </div>
+        <div class="bg-white/8 w-99 h-30 absolute left-3 top-40 rounded-lg text-white">
+            <div class="absolute  left-5 top-4 text-base text-white">
+                Create your first playlist
+            </div>
+            <div class="absolute  left-5 top-13 text-xs text-white/90">
+                It’s easy, we’ll help you
+            </div>
+            <div class="bg-white w-30 h-8 absolute left-5 top-19 rounded-full text-black text-xs">
+                <div class=" hello absolute top-2 left-5  ">Create playlist</div>
+            </div>
+        </div>
+        <div class="bg-white/8 w-99 h-30 absolute left-3 top-80 rounded-lg text-white">
+            <div class="absolute  left-5 top-4 text-base text-white">Let's find some podcasts to follow</div>
+            <div class="absolute  left-5 top-13 text-xs text-white/90">We'll keep you updated on new episodes</div>
+            <div class="bg-white w-30 h-8 absolute left-5 top-19 rounded-full text-black text-xs">
+                <div class=" hello absolute top-2 left-3 ">Browse podcasts</div>
+            </div>
+        </div>
+
+        <div
+            class=" w-30 h-9 absolute left-10 top-175 rounded-full text-white text-xs border-1 border-white flex align-center">
+            <i class="fa-solid fa-globe text-xl pt-2 ps-2"></i>
+            <div class=" hello absolute top-2 left-12  ">English</div>
+        </div>
+    </div>
+    <!-- main section -->
+
+    <div class="flex flex-col top-18 left-106 w-screen h-175 bg-white/10 text-white pt-5 ps-5 fixed rounded-xl">
+        <div class=" ps-6 text-2xl hover:underline">Trending songs</div>
+        <div class="flex p-5 gap-6">
+            <div class="bg-white/1 hover:bg-white/8  h-64 left-10 top-15 rounded-lg text-white ">
+                <div class="ps-4 pt-4 pr-4">
+                    <img src="/Amazon-demo/responsive/song-1.jpeg" alt="">
+                </div>
+                <div class=" pt-2 ps-3 text-white hover:underline">Song Name</div>
+                
+                <div class="pt-3 ps-3 text-xs text-white/90 hover:underline">Artist Name</div>
+                <div class=" bg-green-400 rounded-full w-10 h-10 text-black">
+                    <i class="fa-solid fa-play text-2xl p-2 ps-3"></i>
+                </div>
+            </div>
+            <div class="bg-white/1 hover:bg-white/8  h-64 left-10 top-15 rounded-lg text-white">
+                <div class="ps-4 pt-4 pr-4">
+                    <img src="/Amazon-demo/spotify/song-4.jpeg" alt="">
+                </div>
+                <div class=" pt-2 ps-3 text-white hover:underline">Song Name</div>
+                <div class="pt-3 ps-3 text-xs text-white/90 hover:underline">Artist Name</div>
+                <div class=" bg-green-400 rounded-full w-10 h-10 text-black ">
+                    <i class="fa-solid fa-play text-2xl p-2 ps-3"></i>
+                </div>
+            </div>
+            <div class="bg-white/1 hover:bg-white/8  h-64 left-10 top-15 rounded-lg text-white ">
+                <div class="ps-4 pt-4 pr-4">
+                    <img src="/Amazon-demo/responsive/song-1.jpeg" alt="">
+                </div>
+                <div class=" pt-2 ps-3 text-white hover:underline">Song Name</div>
+                
+                <div class="pt-3 ps-3 text-xs text-white/90 hover:underline">Artist Name</div>
+                <div class=" bg-green-400 rounded-full w-10 h-10 text-black">
+                    <i class="fa-solid fa-play text-2xl p-2 ps-3"></i>
+                </div>
+            </div>
+            <div class="bg-white/1 hover:bg-white/8  h-64 left-10 top-15 rounded-lg text-white">
+                <div class="ps-4 pt-4 pr-4">
+                    <img src="/Amazon-demo/spotify/song-2.jpeg" alt="">
+                </div>
+                <div class=" pt-2 ps-3 text-white hover:underline">Song Name</div>
+                <div class="pt-3 ps-3 text-xs text-white/90 hover:underline">Artist Name</div>
+                <div class=" bg-green-400 rounded-full w-10 h-10 text-black ">
+                    <i class="fa-solid fa-play text-2xl p-2 ps-3"></i>
+                </div>
+            </div>
+            <div class="bg-white/1 hover:bg-white/8  h-64 left-10 top-15 rounded-lg text-white">
+                <div class="ps-4 pt-4 pr-4">
+                    <img src="/Amazon-demo/spotify/song-3.jpeg" alt="">
+                </div>
+                <div class=" pt-2 ps-3 text-white hover:underline">Song Name</div>
+                <div class="pt-3 ps-3 text-xs text-white/90 hover:underline">Artist Name</div>
+                <div class=" bg-green-400 rounded-full w-10 h-10 text-black ">
+                    <i class="fa-solid fa-play text-2xl p-2 ps-3"></i>
+                </div>
+            </div>
+            <div class="bg-white/1 hover:bg-white/8  h-64 left-10 top-15 rounded-lg text-white">
+                <div class="ps-4 pt-4 pr-4">
+                    <img src="/Amazon-demo/spotify/song-4.jpeg" alt="">
+                </div>
+                <div class=" pt-2 ps-3 text-white hover:underline">Song Name</div>
+                <div class="pt-3 ps-3 text-xs text-white/90 hover:underline">Artist Name</div>
+                <div class=" bg-green-400 rounded-full w-10 h-10 text-black ">
+                    <i class="fa-solid fa-play text-2xl p-2 ps-3"></i>
+                </div>
+            </div>
+            <div class="bg-white/1 hover:bg-white/8  h-64 left-10 top-15 rounded-lg text-white">
+                <div class="ps-4 pt-4 pr-4">
+                    <img src="/Amazon-demo/spotify/song-5.jpeg" alt="">
+                </div>
+                <div class=" pt-2 ps-3 text-white hover:underline">Song Name</div>
+                <div class="pt-3 ps-3 text-xs text-white/90 hover:underline">Artist Name</div>
+                <div class=" bg-green-400 rounded-full w-10 h-10 text-black ">
+                    <i class="fa-solid fa-play text-2xl p-2 ps-3"></i>
+                </div>
+            </div>
+            <div class="bg-white/1 hover:bg-white/8  h-64 left-10 top-15 rounded-lg text-white">
+                <div class="ps-4 pt-4 pr-4">
+                    <img src="/Amazon-demo/responsive/song-1.jpeg" alt="">
+                    <div class=" pt-2 ps-3 text-white hover:underline">Song Name</div>
+                    <div class="pt-3 ps-3 text-xs text-white/90 hover:underline">Artist Name</div>
+                    <div class=" bg-green-400 rounded-full w-10 h-10 text-black ">
+                        <i class="fa-solid fa-play text-2xl p-2 ps-3"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+   <div class=" ps-6 text-2xl hover:underline">Popular artists</div>
+        <div class="flex p-5 gap-6">
+            <div class="bg-white/1 hover:bg-white/8  w-45 h-64 left-10 top-15 rounded-lg text-white ">
+                <div class="ps-2 pt-2 pr-2 ">
+                    <img src="/Amazon-demo/responsive/song-1.jpeg" alt="" class=" rounded-full">
+                </div>
+                <div class=" pt-2 ps-3 text-white hover:underline">Singer name</div>
+                
+                <div class="pt-3 ps-3 text-xs text-white/90 hover:underline">Artist</div>
+                <div class=" bg-green-400 rounded-full w-10 h-10 text-black">
+                    <i class="fa-solid fa-play text-2xl p-2 ps-3"></i>
+                </div>
+            </div>
+            <div class="bg-white/1 hover:bg-white/8  w-45 h-64 left-10 top-15 rounded-lg text-white ">
+                <div class="ps-2 pt-2 pr-2  ">
+                    <img src="/Amazon-demo/responsive/song-1.jpeg" alt="" class=" rounded-full">
+                </div>
+                <div class=" pt-2 ps-3 text-white hover:underline">Singer name</div>
+                
+                <div class="pt-3 ps-3 text-xs text-white/90 hover:underline">Artist</div>
+                <div class=" bg-green-400 rounded-full w-10 h-10 text-black">
+                    <i class="fa-solid fa-play text-2xl p-2 ps-3"></i>
+                </div>
+            </div>
+            <div class="bg-white/1 hover:bg-white/8  w-45 h-64 left-10 top-15 rounded-lg text-white ">
+                <div class="ps-2 pt-2 pr-2  ">
+                    <img src="/Amazon-demo/responsive/song-1.jpeg" alt="" class=" rounded-full">
+                </div>
+                <div class=" pt-2 ps-3 text-white hover:underline">Singer name</div>
+                
+                <div class="pt-3 ps-3 text-xs text-white/90 hover:underline">Artist</div>
+                <div class=" bg-green-400 rounded-full w-10 h-10 text-black">
+                    <i class="fa-solid fa-play text-2xl p-2 ps-3"></i>
+                </div>
+            </div>
+            
+            <div class="bg-white/1 hover:bg-white/8  w-45 h-64 left-10 top-15 rounded-lg text-white ">
+                <div class="ps-2 pt-2 pr-2 ">
+                    <img src="/Amazon-demo/responsive/song-1.jpeg" alt="" class=" rounded-full">
+                </div>
+                <div class=" pt-2 ps-3 text-white hover:underline">Singer name</div>
+                
+                <div class="pt-3 ps-3 text-xs text-white/90 hover:underline">Artist</div>
+                <div class=" bg-green-400 rounded-full w-10 h-10 text-black">
+                    <i class="fa-solid fa-play text-2xl p-2 ps-3"></i>
+                </div>
+            </div>
+            <div class="bg-white/1 hover:bg-white/8  w-45 h-64 left-10 top-15 rounded-lg text-white ">
+                <div class="ps-2 pt-2 pr-2 ">
+                    <img src="/Amazon-demo/responsive/song-1.jpeg" alt="" class=" rounded-full">
+                </div>
+                <div class=" pt-2 ps-3 text-white hover:underline">Singer name</div>
+                
+                <div class="pt-3 ps-3 text-xs text-white/90 hover:underline">Artist</div>
+                <div class=" bg-green-400 rounded-full w-10 h-10 text-black">
+                    <i class="fa-solid fa-play text-2xl p-2 ps-3"></i>
+                </div>
+            </div>
+            <div class="bg-white/1 hover:bg-white/8  w-45 h-64 left-10 top-15 rounded-lg text-white ">
+                <div class="ps-2 pt-2 pr-2 ">
+                    <img src="/Amazon-demo/responsive/song-1.jpeg" alt="" class=" rounded-full">
+                </div>
+                <div class=" pt-2 ps-3 text-white hover:underline">Singer name</div>
+                
+                <div class="pt-3 ps-3 text-xs text-white/90 hover:underline">Artist</div>
+                <div class=" bg-green-400 rounded-full w-10 h-10 text-black">
+                    <i class="fa-solid fa-play text-2xl p-2 ps-3"></i>
+                </div>
+            </div>
+            <div class="bg-white/1 hover:bg-white/8  w-45 h-64 left-10 top-15 rounded-lg text-white ">
+                <div class="ps-2 pt-2 pr-2 ">
+                    <img src="/Amazon-demo/responsive/song-1.jpeg" alt="" class=" rounded-full">
+                </div>
+                <div class=" pt-2 ps-3 text-white hover:underline">Singer name</div>
+                
+                <div class="pt-3 ps-3 text-xs text-white/90 hover:underline">Artist</div>
+                <div class=" bg-green-400 rounded-full w-10 h-10 text-black">
+                    <i class="fa-solid fa-play text-2xl p-2 ps-3"></i>
+                </div>
+            </div>
+            <div class="bg-white/1 hover:bg-white/8  w-45 h-64 left-10 top-15 rounded-lg text-white ">
+                <div class="ps-2 pt-2 pr-2 ">
+                    <img src="/Amazon-demo/responsive/song-1.jpeg" alt="" class=" rounded-full">
+                </div>
+                <div class=" pt-2 ps-3 text-white hover:underline">Singer name</div>
+                
+                <div class="pt-3 ps-3 text-xs text-white/90 hover:underline">Artist</div>
+                <div class=" bg-green-400 rounded-full w-10 h-10">
+                    <i class="fa-solid fa-play text-2xl p-2 ps-3"></i>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>

@@ -1,0 +1,145 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style>
+    @keyframes move-screen {
+      0% {
+        opacity: 80;
+        transform: translateY(0px);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(-800px);
+      }
+    }
+
+    @keyframes move-screen1 {
+      0% {
+        opacity: 80;
+        transform: translateY(0px);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(-1580px);
+      }
+    }
+
+    @keyframes move-bars {
+      0% {
+        opacity: 0;
+        transform: translateY(100%);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes grow-up {
+      0% {
+        opacity: 0;
+        clip-path: inset(100% 0 0 0);
+      }
+
+      100% {
+        opacity: 1;
+        clip-path: inset(0 0 0 0);
+      }
+  
+    }
+
+    @keyframes grow-up1 {
+      0% {
+        clip-path: inset(100% 0 0 0);
+      }
+
+      40% {
+        opacity: 1;
+        clip-path: inset(0 0 0 0);
+      }
+
+      60% {
+        opacity: 1;
+        clip-path: inset(0 0 0 0);
+      }
+
+      100% {
+        opacity: 1;
+        clip-path: inset(0 0 100% 0);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <!-- screen1 -->
+    <div class="bg-[#d9d4c6] w-full h-screen flex justify-center  items-center">
+      <div class=" text-[#33432e] font-bold text-7xl tracking-widest  ">mellem</div>
+    </div>
+    <!-- screen2 -->
+    <div class="flex gap-10 bg-[#33432e] w-full h-[800px] justify-center items-center"
+      style="opacity: 0; animation: move-screen 0.5s ease-out forwards;animation-delay: 0.5s;">
+      <div class="w-[200px] h-[500px]  bg-white bg-[url('mellem1.avif')] bg-cover bg-left bg-no-repeat "
+        style=" opacity:0 ;animation: grow-up1 2s ease-out forwards;animation-delay: 1.2s"></div>
+      <div class=" w-[200px] h-[500px] bg-white bg-[url('mellem1.avif')] bg-cover bg-right bg-no-repeat"
+        style=" opacity:0 ;animation: grow-up1 2s ease-out forwards;animation-delay: 1.3s"></div>
+      <div class=" w-[200px] h-[500px] bg-white bg-[url('mellem.avif')]  bg-cover bg-left bg-no-repeat"
+        style=" opacity:0 ;animation: grow-up 3s ease-out forwards;animation-delay: 1.4s"></div>
+      <div class=" w-[200px] h-[500px] bg-white bg-[url('mellem.avif')]  bg-cover bg-right bg-no-repeat"
+        style=" opacity:0 ;animation: grow-up 3s ease-out forwards;animation-delay: 1.4s"></div>
+      <div class=" w-[200px] h-[500px] bg-white bg-[url('mellem2.avif')] bg-cover bg-left bg-no-repeat"
+        style=" opacity:0 ;animation: grow-up1 2s ease-out forwards;animation-delay: 1.6s"></div>
+      <div class=" w-[200px] h-[500px] bg-white bg-[url('mellem2.avif')] bg-cover bg-right bg-no-repeat"
+        style=" opacity:0 ;animation: grow-up1 2s ease-out forwards;animation-delay: 1.7s"></div>
+    </div>
+    <!-- screen3-->
+    <div class=" flex flex-col bg-[#d9d4c6] w-full h-[800px] "
+      style="opacity: 0; animation: move-screen1 1s ease-out forwards;animation-delay: 3s;">
+      <div class="flex justify-between">
+        <div class="flex gap-3 mt-8 ml-10 ">
+          <div
+            class=" flex items-center justify-center w-[150px] h-10 rounded-full border-[#33432e] border-2 text-[#33432e] text-xl hover:bg-[#33432e] hover:cursor-pointer hover:text-white">
+            Projects +</div>
+          <div
+            class=" flex items-center justify-center w-[100px] h-10 rounded-full border-[#33432e] border-2 text-[#33432e] text-xl hover:bg-[#33432e] hover:cursor-pointer hover:text-white">
+            About</div>
+          <div
+            class=" flex items-center justify-center w-[100px] h-10 rounded-full border-[#33432e] border-2 text-[#33432e] text-xl hover:bg-[#33432e] hover:cursor-pointer hover:text-white">
+            Items</div>
+          <div
+            class=" flex items-center justify-center w-[100px] h-10 rounded-full border-[#33432e] border-2 text-[#33432e] text-xl hover:bg-[#33432e] hover:cursor-pointer hover:text-white">
+            FAQs</div>
+        </div>
+        <div class="flex  mt-8 ml-10">
+          <div
+            class=" flex items-center justify-center w-[150px] h-12  text-[#33432e] text-xl hover:bg-[#33432e] hover:cursor-pointer hover:text-white">
+            Contact</div>
+          <div
+            class=" flex items-center justify-center w-[100px] h-12  text-[#33432e] text-xl hover:bg-[#33432e] hover:cursor-pointer hover:text-white">
+            In</div>
+
+        </div>
+
+      </div>
+      <div class="w-full h-[800px] flex items-center justify-center ml-5 ">
+        <div class=" text-[#33432e] font-bold text-[350px] tracking-widest  mt-4">me</div>
+        <div class=" flex gap-10">
+          <div class=" w-[200px] h-[600px] bg-white bg-[url('mellem.avif')] bg-cover bg-left bg-no-repeat"></div>
+          <div class=" w-[200px] h-[600px] bg-white bg-[url('mellem.avif')] bg-cover bg-right bg-no-repeat"></div>
+        </div>
+        <div class=" text-[#33432e] font-bold text-[330px] tracking-widest  ">em</div>
+      </div>
+    </div>
+
+  </div>
+</body>
+
+</html>

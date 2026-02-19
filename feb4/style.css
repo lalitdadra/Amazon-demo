@@ -1,0 +1,25 @@
+.loader{
+    position: relative;
+}   
+
+.container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.container img {
+    position: absolute;
+    top: 350px;
+    left:930px;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    scale: 0;
+    transition: all 0.80s ease-out 0s;
+}
+.scale-in {
+    scale:1 !important;
+    transition: all 0.25s ease-out 0s;
+}
