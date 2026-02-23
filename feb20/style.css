@@ -26,10 +26,10 @@
 
 
 .page-loading{
-    animation: hat-ja 3s ease-out forwards;
+    animation: hat-ja 2s ease-out forwards;
   /* animation: hideLoader 1s ease forwards; */
 
-  animation-delay: 8s; /* 5s delay + 3s duration */
+  animation-delay: 2s; /* 5s delay + 3s duration */
 }
 .square{
   background-color: #000;
@@ -53,12 +53,17 @@
 
 @keyframes hat-ja {
     0%{
-        transform: rotate(0deg);
-        transform-origin: bottom left;
+        transform: translateY(0);
+        transform-origin: top left;
+        position: relative;
     }
     100%{
-        transform: rotate(180deg);
-        transform-origin: bottom right;
+        transform: translateY(90);
+        transform-origin: top right;
+        /* position: relative; */
+        /* opacity: 0; */
+        /* position: fixed; */
+
 
     }
     

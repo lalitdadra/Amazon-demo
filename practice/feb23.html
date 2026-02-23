@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="h-screen bg-cover bg-center flex items-center justify-center"
+    style="background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb');">
+
+    <div class="w-[380px] p-4 space-y-4">
+
+        <!-- Top Grid -->
+        <div class="grid grid-cols-2 gap-4">
+
+            <!-- WiFi -->
+            <div class="backdrop-blur-xl bg-white/20 rounded-2xl p-4 text-white shadow-lg">
+                <p class="font-semibold">Wi-Fi</p>
+                <p class="text-sm opacity-70">Airtel_6866</p>
+            </div>
+
+            <!-- Music -->
+            <div
+                class="backdrop-blur-xl bg-white/20 rounded-2xl p-4 text-white shadow-lg flex items-center justify-center">
+                <p>Not Playing ▶</p>
+            </div>
+
+        </div>
+
+        <!-- Middle Buttons -->
+        <div class="grid grid-cols-3 gap-4">
+            <div
+                class="backdrop-blur-xl bg-white/20 rounded-full h-16 flex items-center justify-center text-white shadow-lg">
+                📶
+            </div>
+            <div
+                class="backdrop-blur-xl bg-white/20 rounded-full h-16 flex items-center justify-center text-white shadow-lg">
+                📷
+            </div>
+            <div
+                class="backdrop-blur-xl bg-white/20 rounded-full h-16 flex items-center justify-center text-white shadow-lg">
+                🌙
+            </div>
+        </div>
+
+        <!-- Brightness -->
+        <div class="backdrop-blur-xl bg-white/20 rounded-2xl p-4 shadow-lg">
+            <p class="text-white mb-2">Display</p>
+            <input type="range" class="w-full">
+        </div>
+
+        <!-- Sound -->
+        <div class="backdrop-blur-xl bg-white/20 rounded-2xl p-4 shadow-lg">
+            <p class="text-white mb-2">Sound</p>
+            <input type="range" class="w-full">
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
