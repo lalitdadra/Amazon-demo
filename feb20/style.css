@@ -1,0 +1,67 @@
+.square-1 {
+  animation: box-second 0.9s ease-out infinite;
+  animation-delay: 0.5s;
+
+}
+.square-2 {
+
+  animation: box-second 0.9s ease-out infinite;
+   animation-delay: 0.6s;
+}
+.square-3 {
+ 
+  animation: box-second 0.9s ease-out infinite;
+   animation-delay: 0.7s;
+}
+.square-4 {
+
+  animation: box-second 0.9s ease-out infinite;
+   animation-delay: 0.8s;
+}
+.square-5 {
+ 
+  animation: box-second 0.9s ease-out infinite;
+   animation-delay: 0.9s;
+}
+
+
+.page-loading{
+    animation: hat-ja 3s ease-out forwards;
+  /* animation: hideLoader 1s ease forwards; */
+
+  animation-delay: 8s; /* 5s delay + 3s duration */
+}
+.square{
+  background-color: #000;
+}
+
+
+@keyframes box-second {
+  0% {
+    transform: rotate(90deg);
+    margin-left: 0px;
+  }
+  100% {
+    background-color: #f2551e;
+    border-radius: 20px;
+    transform: rotate(180deg);
+    margin-left: 10px;
+
+  }
+}
+
+
+@keyframes hat-ja {
+    0%{
+        transform: rotate(0deg);
+        transform-origin: bottom left;
+    }
+    100%{
+        transform: rotate(180deg);
+        transform-origin: bottom right;
+
+    }
+    
+}
+
+

@@ -1,0 +1,96 @@
+*{
+    margin:0;
+    padding:0;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    height:100vh;
+    background:#000;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+    position:relative;
+}
+
+/* Background Circles */
+.circle{
+    position:absolute;
+    border-radius:50%;
+    filter: blur(40px);
+}
+
+.circle1{
+    width:220px;
+    height:220px;
+    background:linear-gradient(200deg,#ff3b6b,#ff7b7b);
+    top:60px;
+    left:800px;
+}
+
+.circle2{
+    width:260px;
+    height:260px;
+    background:linear-gradient(135deg,#7b2ff7,#f107a3);
+    bottom:80px;
+    right:320px;
+}
+
+.circle3{
+    width:90px;
+    height:90px;
+    background:linear-gradient(135deg,#ff3b6b,#ff7b7b);
+    bottom:140px;
+    left:120px;
+}
+
+.circle4{
+    width:60px;
+    height:60px;
+    background:linear-gradient(135deg,#7b2ff7,#f107a3);
+    top:140px;
+    right:160px;
+}
+
+/* Glass Card */
+.card{
+    width:900px;
+    height:500px;
+    border-radius:20px;
+    background:rgba(255,255,255,0.08);
+    border:1px solid rgba(255,255,255,0.2);
+    padding:30px;
+    position:relative;
+    color:#dcdcdc;
+}
+
+
+.top-right{
+    position:absolute;
+    top:30px;
+    right:30px;
+    text-align:right;
+}
+
+.top-right h2{
+    font-size:18px;
+    letter-spacing:2px;
+}
+
+.top-right p{
+    font-size:12px;
+    margin-top:4px;
+    color:#bfbfbf;
+}
+
+.bottom-left{
+    position:absolute;
+    bottom:30px;
+    left:30px;
+    font-size:20px;
+    letter-spacing:2px;
+    color:#cfcfcf;
+} 
+/Users/varunsharma/Documents/GitHub/Amazon-demo/responsive
