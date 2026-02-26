@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<title>Chatbot</title>
+<script src="./script.js" defer></script>
+</head>
+
+<body class="bg-black flex justify-center itmes-center">
+    <div class="left-150 main-box  text-white    w-230 pt-10 min-h-210 max-h-auto bg-blue-200/10 p-2 mt-5 rounded-lg">
+        <div id="result"
+            class=" min-w-50 min-h-8 max-h-500 max-w-200 bg-white/10 bottom-180 rounded-lg text-white/80 flex text-ld items-center font-style: italic ps-3 ms-150">
+        </div>
+        <div id="output"
+            class=" output w-200 bg-white/10  h-auto bottom-70  rounded-lg py-2 mt-5 font-mono  max-w-auto max-h-auto">
+        </div>
+        <div>
+        </div>
+        <h1 id="container"></h1>
+        <div class="flex border border-white/10 w-225 rounded-2xl   bg-white/10 text-white  mt-160 ">
+            <div class="px-2 flex items-center ">
+                <input
+                    class="w-215 border-0 bg-transparent p-2 focus:outline-none focus:ring-0 focus:ring-offset-0 transition-all duration-300"
+                    id="username" type="text" placeholder="Enter anything" />
+                <button class="bg-white w-5 h-5 rounded-xl" id="btn" onclick="myfunc()"></button>
+            </div>
+        </div>
+    </div>
+    
+</body>
+
+</html>
