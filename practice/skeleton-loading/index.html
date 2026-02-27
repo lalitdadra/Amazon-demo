@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
+    <title>Skeleton-loading</title>
+</head>
+
+<body class="  bg-blue-300/30 ">
+    <div class="main-container flex flex-col justify-center items-center p-20 gap-10 ">
+        <div class="header w-[800px] h-[300px] bg-gray-500/10 rounded-xl flex justify-center items-center">
+            <img src="./images/bmw-second.jpg" alt="BMW 3 Series " class="car-image z-10 opacity-0 "
+                style="animation-delay: 1s;">
+            <div class="box w-[60px] h-full bg-gray-500/60 z-0">
+            </div>
+        </div>
+        <div class="header w-[800px] h-[200px] bg-gray-500/10 rounded-xl flex justify-center items-center ">
+                <img src="./images/bmw.jpg" alt="BMW 3 Series " class="car-image z-10 opacity-0 "
+                style="animation-delay: 1s;">
+            <div class="box-2 w-[60px] h-full bg-gray-500/60 z-0 ">
+            </div>
+        </div>
+    </div>
+    <div class="page-loading  bg-gray-500/10 flex justify-center items-center h-1ﬁ0 w-200 ">
+        <div class="loading flex flex-col justify-center items-center">
+            <div class="icons absolute flex gap-[2px] itmes-center">
+                <div class="square square-1 w-6 h-6 "></div>
+                <div class="square square-2 w-6 h-6 "></div>
+                <div class="square square-3 w-6 h-6 "></div>
+                <div class="square square-4 w-6 h-6 "></div>
+                <div class="square square-5 w-6 h-6 "></div>
+            </div>
+            <!-- <img src="./images/bmw-first.jpg" alt="BMW 3 Series " class= "absolute h-[40%] w-[30%]"> -->
+        </div>
+    </div>
+</body>
+</html>

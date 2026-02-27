@@ -102,3 +102,22 @@
     top:90px;
 }   
 
+.box{
+    border-style:double;
+    border: 6px solid rgb(0, 0, 0, 0.2);
+    border-top: 6px solid rgb(255, 255, 255, 0.3);
+    animation: spin 0.3s  ease-out infinite;
+}
+
+
+
+@keyframes spin {
+    0%{
+        transform: rotate(0deg);
+        /* border-color: aquamarine; */
+    }
+    
+    100%{
+        transform: rotate(360deg);
+    }
+}

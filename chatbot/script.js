@@ -31,10 +31,6 @@ async function myfunc() {
     // document.getElementById("result").innerHTML = username;
     input_field.value="";
 
-    if(myfunc()=""){
-        console.log("enter something")
-    }
-
     try {
         const response = await fetch("http://192.168.1.23:8000/chat", {
             method: "POST",
@@ -49,5 +45,4 @@ async function myfunc() {
 
     } catch (error) {
         console.log(error);
-    }
-}
+       }   }
