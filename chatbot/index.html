@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <title>Chatbot</title>
@@ -11,13 +12,23 @@
 </head>
 
 <body class="bg-black flex justify-center itmes-center">
-    <div class="left-150 main-box  text-white    w-230 pt-10 min-h-210 max-h-auto bg-blue-200/10 p-2 mt-5 rounded-lg">
-        <div id="result"
-            class=" min-w-50 min-h-8 max-h-500 max-w-200 bg-white/10 bottom-180 rounded-lg text-white/80 flex text-ld items-center font-style: italic ps-3 ms-150">
+    <div class="history absolute left-0 h-auto min-h-200 bg-white/20 rounded-xl p-2  w-[20%] m-5 text-white">
+        <div class="bar flex justify-center bg-black rounded-xl p-2">History of Chat</div>
+        <div class="text-white/50 ps-5 pt-2">Your Chat</div>
+        <div id="history-bar" class=" mx-auto w-70 mt-2">
         </div>
-        <div id="output"
-            class=" output w-200 bg-white/10  h-auto bottom-70  rounded-lg py-2 mt-5 font-mono  max-w-auto max-h-auto">
+    </div>
+    <div class="left-150 main-box  text-white    w-230  min-h-210 max-h-auto bg-blue-200/10 p-2 mt-5 rounded-lg">
+        <div class="icon top-0 w-5 h-5 animate-[spin_3s_ease-in-out_infinite] hover:scale-125">🤖
         </div>
+            <div id="message">
+                <div id="user"
+                class="user-box ">
+            </div>
+            <div id="ai"
+                class=" output ">
+            </div>
+            </div>
         <div>
         </div>
         <h1 id="container"></h1>
@@ -30,7 +41,9 @@
             </div>
         </div>
     </div>
-    
+
 </body>
 
 </html>
+
+<!-- min-w-50 min-h-8 max-h-500 max-w-200 bg-white/10 bottom-180 rounded-lg text-white/80 flex text-ld items-center font-style: italic ps-3 ms-150 hover:bg-white/20 hover:text-white -->
