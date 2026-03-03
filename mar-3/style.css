@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    @apply bg-black text-white 
+}
+.header{
+    @apply flex justify-center items-center gap-10
+}
+.boxs {
+    @apply flex gap-10
+}
+.box-seven{
+    @apply rotate-90
+}
+.box-one{
+    @apply  bg-blue-500 
+}

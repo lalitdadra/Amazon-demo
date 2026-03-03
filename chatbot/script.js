@@ -1,49 +1,61 @@
-// function myfunc() {
 
-//     const input = document.getElementById("username").value;
-//     document.getElementById("result").innerHTML = input;
-//     document.getElementById("output").innerHTML = input;
 
-//     fetch("http://127.0.0.1:8000/chat",
-//         {
-//             method:"POST",
-//             headers:{
-//                 'Content-Type':"application/json"
-//             },
-//             body:JSON.stringify({name:username})
-//         }
-//     ).then(response => response.json())
-//     .then(data => {
-//         document.getElementById("output").innerHTML = data.message;
-//     })
-//     .catch(error => {
-//         console.error("Error:", error);
-//     });
-// }
-const messages = [];
+const messages = [[]];
+let id = 0;
+
+const message = document.getElementById("message");
+
+
+const input_field = document.getElementById("username");
+
+
+function createNewChat(id) {
+    const history_container = document.getElementById("history-container");
+    const chatItem = document.createElement("div");
+    chatItem.className = "history-bar";
+    chatItem.innerText = `Chat ${id}`;
+    chatItem.onclick = function (){switchChat(id);};
+    history_container.appendChild(chatItem);
+}
+
+createNewChat(id);
+
+
+function switchChat(chatId) {
+    id=chatId;
+    renderMessages();
+}
+
+
+
+
 async function myfunc() {
-    const input_field = document.getElementById("username");
-    
+    // let mainBox = [];
     const username = input_field.value;
-    
-    messages.push({ role: 'user', text: username })
-    
+
+    messages[id].push({ role: 'user', text: username })
+
     input_field.value = "";
-    
+
+
     try {
-        const response = await fetch("http://192.168.1.23:8000/chat", {
+        const response = await fetch("http://192.168.29.119:8000/chat", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({ content: username })
-        });
 
+        });
+        console.log('here')
+
+        console.log('here also')
         const data = await response.json();
-        messages.push({ role: 'ai', text: data.content })
-       
+        messages[id].push({ role: 'ai', text: data.content })
+
         console.log(messages);
         renderMessages();
+        // messages[id].push(ma);
     }
 
     catch (error) {
@@ -51,26 +63,35 @@ async function myfunc() {
     }
 }
 function renderMessages() {
-  const message = document.getElementById("message");
-  message.innerHTML = ""; 
+    const message = document.getElementById("message");
+    message.innerHTML = "";
 
-  messages.forEach(msg => {
-            const div = document.createElement("div");
-            div.className = msg.role === "user" ? "user-box" : "output";
-            div.textContent = msg.text;
+    messages[id].forEach(msg => {
+        const div = document.createElement("div");
+        div.className = msg.role === "user" ? "user-box" : "output";
+        div.textContent = msg.text;
 
-            message.appendChild(div);
-        });
+        message.appendChild(div);
+    });
 
-        
-        message.scrollTop = message.scrollHeight;
+
+    message.scrollTop = message.scrollHeight;
 }
 
-username.addEventListener('keydown', function (event) {
+input_field.addEventListener('keydown', function (event) {
     if (event.key === 'Enter') {
         myfunc()
     }
 });
+
+function newChat() {
+    id++;
+    message.innerHTML = "";
+    messages[id] = [];
+    createNewChat(id);
+    renderMessages();
+
+}
 
 
 
