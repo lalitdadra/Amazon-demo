@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="./script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Second page</title>
+</head>
+<body>
+    <div class="details-container w-screen h-screen flex justify-center items-center flex-col gap-10 bg-black ">
+       <div class="bg-white/20 w-250 flex justify-center items-center flex-col h-150">
+         <div class="header-details text-4xl bg-blue-300 px-8 py-2 rounded-2xl  w-100 font-bold ">
+            <h1>Registration  Page 2</h1>
+        </div>
+        <form class="flex flex-col bg-white/30 p-10 gap-6 rounded-xl w-96">
+            <div>
+                <input id="higher" type="text" class="page2-input  text-white w-full p-3 border rounded-lg " placeholder="Higher Education">
+                <span id="error-higher" class="text-red-500 text-sm hidden">Higher Education is required</span>
+            </div>
+            <div>
+                <input id="college" type="text" class="page2-input  text-white w-full p-3 border rounded-lg " placeholder="College Name">
+                <span id="error-college" class="text-red-500 text-sm hidden">College Name is required</span>
+            </div>
+            <div>
+                <input id="school" type="text" class="page2-input  text-white w-full p-3 border rounded-lg " placeholder="School Name">
+                <span id="error-school" class="text-red-500 text-sm hidden">School Name is required</span>
+            </div>
+            <div>
+                <input id="marks" type="number" class="page2-input  text-white w-full p-3 border rounded-lg " placeholder="10th Marks (0-100)" >
+                <span id="error-marks" class="text-red-500 text-sm hidden">10th marks must be 0-100</span>
+            </div>
+            <div>
+                <input id="dob" type="date" class="page2-input  text-white w-full p-3 border rounded-lg " placeholder="Date of Birth">
+                <span id="error-dob" class="text-red-500 text-sm hidden">Valid past DOB required</span>
+            </div>
+            <button type="button" id="final-submit" class="w-full bg-green-500 text-white p-3 rounded-lg font-bold hover:bg-green-600 transition">Complete Registration</button>
+        </form>
+       </div>
+    </div>
+</body>
+</html>

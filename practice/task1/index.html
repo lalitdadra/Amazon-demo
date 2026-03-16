@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="./script.js"></script>
+    <link rel="stylesheet" href="./style.css">
+    <title>Registration</title>
+</head>
+
+<body>
+    <div class="main-container w-screen h-screen flex justify-center items-center flex-col gap-10 bg-current bg-cover">
+
+        <div
+            class="rounded-2xl flex items-center justify-center w-250 h-150 shadow-[2px_2px_20px_3px_rgba(225,225,225,0.8)] gap-5">
+            <div class="image-background w-[90%] h-full rounded-l-2xl  "></div>
+            <div class="p-5">
+                <div
+                    class="registration text-4xl pr-8 py-2 rounded-2xl font-bold text-white w-full  flex  justify-center">
+                    <h1>Sign in </h1>
+                </div>
+                <div class="flex ">
+                    <div class="moving-box flex flex-col justify-center items-center ">
+
+                    </div>
+                    <div class="flex flex-col  p-10 gap-6 rounded-xl w-100 text-white  h-100 ">
+                        <div class="fullname flex felx-row gap-5">
+                            <div class="flex flex-col">
+                                <div class="">
+                                    <input id="firstname" oninput="printError(this) " type="text"
+                                        class="page2-input w-full p-3 border rounded-lg focus-visible:outline-none hover:bg-white/10 hover:shadow-[0px_0px_10px_2px_rgba(225,225,225,0.8)]" 
+                                        placeholder="Firstname">
+                                </div>
+                                <span id="firstError" class="text-red-500 text-sm "></span>
+                            </div>
+                            <div class="flex flex-col">
+                                <div>
+                                    <input id="lastname" oninput="printError(this)" type="text"
+                                        class="page2-input w-full focus-visible:outline-none  p-3 border rounded-lg hover:bg-white/10"
+                                        placeholder="Lastname">
+                                </div>
+                                <span id="lastError" class="text-red-500 text-sm "></span>
+                            </div>
+                        </div>
+                        <div class="flex flex-col">
+                            <div>
+                                <input id="email" type="email" placeholder="Email@gmail.com" oninput="printError(this)"
+                                    class="w-full p-3 border  focus-visible:outline-none rounded-lg hover:bg-white/10">
+
+                            </div>
+                            <span id="emailError" class="text-red-500 text-sm "></span>
+                            <span id="emailvalid" class="text-green-500 text-sm "></span>
+
+                        </div>
+                        <div class="flex flex-col">
+                            <div>
+                                <input id="password" type="password" placeholder="Password " oninput="printError(this)"
+                                    class="w-full p-3 border  focus-visible:outline-none rounded-lg hover:bg-white/10">
+
+                            </div>
+                            <span id="passwordError" class="text-red-500 text-sm "></span>
+                        </div>
+                        <button onclick="validateForm()" id="next-btn"
+                            class="w-full bg-yellow-700 text-white/70 p-3 rounded-lg font-bold hover:bg-yellow-600 hover:text-white transition">Next</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

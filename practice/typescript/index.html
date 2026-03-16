@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login & Registration</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+      <div class="image-section">
+        <div class="image-content">
+          <h3>Welcome Back!</h3>
+          <p>Login or create account to continue</p>
+        </div>
+      </div>
+      <div class="form-container">
+        <div class="form-toggle">
+          <button class="toggle-btn active" data-target="login">Login</button>
+          <button class="toggle-btn" data-target="register">Register</button>
+        </div>
+        
+        <div id="loginSection">
+          <h2>Login to your account</h2>
+          <form id="loginForm">
+            <div class="form-group">
+              <label for="loginEmail">Email</label>
+              <input type="email" id="loginEmail" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="loginPassword">Password</label>
+              <input type="password" id="loginPassword" name="password" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Login</button>
+          </form>
+        </div>
+        
+        <div id="registerSection" class="hidden">
+          <h2>Create new account</h2>
+          <form id="registerForm">
+            <div class="form-group">
+              <label for="regName">Full Name</label>
+              <input type="text" id="regName" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="regEmail">Email</label>
+              <input type="email" id="regEmail" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="regPassword">Password</label>
+              <input type="password" id="regPassword" name="password" required>
+            </div>
+            <div class="form-group">
+              <label for="regConfirm">Confirm Password</label>
+              <input type="password" id="regConfirm" name="confirmPassword" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Register</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

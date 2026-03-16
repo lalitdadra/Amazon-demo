@@ -1,0 +1,6 @@
+.image-background{
+background-image: 
+    linear-gradient(to right, rgba(0,0,0,0) 50%, rgba(0,0,0,1) 90%), 
+    url('./login.jpg');
+  background-size: cover; 
+}
