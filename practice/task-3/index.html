@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="./script.js" defer></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="main-container h-screen bg-white">
+        <div class="calculator flex flex-col justify-center items-center gap-1 h-screen text-3xl font-bold text-black/80   ">
+            <div
+            class="border-2 h-170 rounded-4xl border-black/20 p-10 bg-gradient-to-br from-black/20 to-white shadow-[5px_5px_10px_2px_rgba(255,255,255,0.8)]">
+            <div class="text-xl p-2 text-black/70">Calculator</div>
+                <div
+                    class="display bg-[#9dab7c]/80 w-93 h-25 flex justify-end px-2 items-center rounded-xl border-4 border-black/70 mb-6 overflow-hidden">
+                    <input id="inputdisplay" type="text" class="w-screen focus:outline-none text-end text-4xl " placeholder="0">
+                </div>
+                <div class=" py-3 third-row flex gap-3">
+                    <button onclick="alldel()"
+                       id="allclear" class="box rounded-xl bg-orange-400 shadow-[0px_0px_10px_2px_rgba(224,222,221,0.8)] w-21 h-16 inset-shadow-sm inset-shadow-black ">AC</button>
+                    <button onclick="loadfunc(this)"
+                        class="rounded-xl bg-black/70  text-white shadow-[0px_0px_10px_2px_rgba(224,222,221,0.8)] w-21 h-16 inset-shadow-sm inset-shadow-black">-</button>
+                    <button onclick="loadfunc(this)"
+                        class="rounded-xl bg-black/70 text-white shadow-[0px_0px_10px_2px_rgba(224,222,221,0.8)] w-21 h-16 inset-shadow-sm inset-shadow-black">%</button>
+                    <button onclick="del()"
+                        class="box rounded-xl bg-black/70 text-white shadow-[0px_0px_10px_2px_rgba(224,222,221,0.8)] w-21 h-16 inset-shadow-sm inset-shadow-black ">⌫</button>
+                </div>
+                <div class=" py-3 second-row flex gap-3">
+                    <button onclick="loadfunc(this)"
+                        class="rounded-xl bg-white shadow-[0px_0px_10px_2px_rgba(224,222,221,0.8)] w-21 h-16 inset-shadow-sm inset-shadow-black ">7</button>
+                    <button onclick="loadfunc(this)"
+                        class="rounded-xl bg-white shadow-[0px_0px_10px_2px_rgba(224,222,221,0.8)] w-21 h-16 inset-shadow-sm inset-shadow-black">8</button>
+                    <button onclick="loadfunc(this)"
+                        class="rounded-xl bg-white shadow-[0px_0px_10px_2px_rgba(224,222,221,0.8)] w-21 h-16 inset-shadow-sm inset-shadow-black ">9</button>
+                    <button onclick="loadfunc(this)"
+                        class="box rounded-xl bg-black/70 text-white shadow-[0px_0px_10px_2px_rgba(224,222,221,0.8)] w-21 h-16 inset-shadow-sm inset-shadow-black">*</button>
+                </div>
+                <div class=" py-3 first-row flex gap-3">
+                    <button onclick="loadfunc(this)"
+                        class="rounded-xl bg-white shadow-[0px_0px_10px_2px_rgba(224,222,221,0.8)] w-21 h-16 inset-shadow-sm inset-shadow-black">4</button>
+                    <button onclick="loadfunc(this)"
+                        class="rounded-xl bg-white shadow-[0px_0px_10px_2px_rgba(224,222,221,0.8)] w-21 h-16 inset-shadow-sm inset-shadow-black">5</button>
+                    <button onclick="loadfunc(this)"
+                        class="rounded-xl bg-white shadow-[0px_0px_10px_2px_rgba(224,222,221,0.8)] w-21 h-16 inset-shadow-sm inset-shadow-black">6</button>
+                    <button onclick="loadfunc(this)"
+                        class="rounded-xl bg-black/70 shadow-[0px_0px_10px_2px_rgba(224,222,221,0.8)] w-21 h-16 inset-shadow-sm inset-shadow-black text-white">/</button>
+                </div>
+                <div class=" py-3 last-row flex gap-3"> 
+                    <button onclick="loadfunc(this)"
+                        class="rounded-xl bg-white shadow-[0px_0px_10px_2px_rgba(224,222,221,0.8)] w-21 h-16 inset-shadow-sm inset-shadow-black">1</button>
+                    <button onclick="loadfunc(this)"
+                        class="rounded-xl bg-white shadow-[0px_0px_10px_2px_rgba(224,222,221,0.8)] w-21 h-16 inset-shadow-sm inset-shadow-black">2</button>
+                    <button onclick="loadfunc(this)"
+                        class="rounded-xl bg-white shadow-[0px_0px_10px_2px_rgba(224,222,221,0.8)] w-21 h-16 inset-shadow-sm inset-shadow-black">3</button>
+                    <button onclick="loadfunc(this)"
+                        class="rounded-xl bg-black/70 text-white shadow-[0px_0px_10px_2px_rgba(224,222,221,0.8)] w-21 h-16 inset-shadow-sm inset-shadow-black">+</button>
+                </div>
+                <div class=" py-3 flex gap-3 flex gap-3">
+                    <button onclick="loadfunc(this)" id="add"
+                        class="rounded-xl bg-white shadow-[0px_0px_10px_2px_rgba(224,222,221,0.8)] w-44 h-16 inset-shadow-sm inset-shadow-black">0</button>
+                        <button onclick="loadfunc(this)"
+                        class="rounded-xl bg-white shadow-[0px_0px_10px_2px_rgba(224,222,221,0.8)] w-21 h-16 inset-shadow-sm inset-shadow-black">.</button>
+                    <button onclick="calculate()"
+                        class="box rounded-xl bg-blue-400 shadow-[0px_0px_10px_2px_rgba(224,222,221,0.8)] w-21 h-16 inset-shadow-sm inset-shadow-black">=</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

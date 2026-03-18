@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="./script.js" defer></script>
+
+
+    <title>TO DO List</title>
+</head>
+
+<body>
+    <div class="main-container h-screen text-white bg-gradient-to-r from-black to-purple-300">
+        <div class="gap-10 h-screen flex justify-center items-center flex-col">
+            <div class="text-4xl font-bold  flex justify-center ">TO DO List</div>
+            <div class="input">
+                <div class="page-1 flex border  p-2 rounded gap-2  ">
+                    <input type="text" placeholder="Enter a new task" id="entertask"
+                        class="w-100 focus-visible:outline-none">
+                    <button id="addtask" onclick="loadtask()" class="rounded px-2 bg-blue-400  flex justify-center">ADD
+                        TASK</button>
+                    <button id="removealltask" onclick="delalltask()"
+                        class="rounded px-2 bg-red-400  flex justify-center">Clear</button>
+                    <div class="rounded px-2 bg-yellow-400  flex justify-center">Clear Completed</div>
+                </div>
+                <div class="">
+                    <div class="output  text-2xl font-bold flex justify-center"> OUTPUT
+                    </div>
+                    <div id="deleted" class="">
+                        <ul id="tasklist"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <input type="number">
+
+</body>
+
+</html>
+<div class=" flex ">

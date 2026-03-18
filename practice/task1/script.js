@@ -48,11 +48,16 @@ function validateForm() {
     }
     if(mail.length && fname.length && lname.length && password.length){
         storage.push(local);            
-        console.log(storage)
+        // console.log(storage)
         localStorage.setItem("storage",JSON.stringify(storage));
         
     }
+    storage.forEach((fruit) => {
+        console.log(fruit.email);
+});
 }
+
+
 
 function printError(input) {
     if (input.value === '') {
@@ -63,6 +68,4 @@ function printError(input) {
  
     }
 }
-
-
 
