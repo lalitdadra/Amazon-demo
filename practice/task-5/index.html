@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <title>JS Dashboard</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      text-align: center;
+      color: white;
+    }
+
+    .title {
+      margin-bottom: 20px;
+      font-size: 2.5rem;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      padding: 20px;
+      margin: 15px;
+      border-radius: 15px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      border: none;
+      background: #000000;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #727071;
+    }
+
+
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* background: #111; */
+      color: #fff;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    #clock {
+      font-size: 60px;
+      margin: 10px 0;
+    }
+
+    #greeting {
+      font-size: 30px;
+    }
+
+    #date {
+      font-size: 18px;
+      color: #aaa;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1 class="title">Welcome, Lalit 👋</h1>
+
+    <div class="card">
+      <h2>Click Counter</h2>
+      <p id="count">0</p>
+      <button onclick="increase()">Click Me</button>
+    </div>
+
+    <div class="card">
+      <h2>Change Background</h2>
+      <button onclick="changeColor()">Change Color</button>
+    </div>
+
+  </div>
+
+  <div class="container">
+    <h1 id="greeting"></h1>
+    <h2 id="clock"></h2>
+    <p id="date"></p>
+  </div>
+
+
+  <div class="main-container h-scree">
+    <div class="calculator   flex flex-col justify-center items-center gap-1  text-3xl font-bold text-black/80   ">
+      <div
+        class="border-2 !mr-10 flex flex-col justify-center items-center w-100 h-140  rounded-4xl border-black/20 p-10 bg-gradient-to-br from-black/20 to-white shadow-[5px_5px_10px_2px_rgba(255,255,255,0.8)]">
+        <div class="text-xl p-2 text-black/70">Calculator</div>
+        <div
+          class="display bg-[#9dab7c]/80 w-93 h-25 flex justify-end px-2 items-center rounded-xl border-4 border-black/70 mb-6 overflow-hidden">
+          <input id="inputdisplay" type="text" class="w-screen focus:outline-none text-end text-4xl " placeholder="0">
+        </div>
+        <div class=" py-3 third-row flex gap-3">
+          <button onclick="alldel()" id="allclear"
+            class="box rounded-xl bg-orange-400 shadow-[0px_0px_10px_2px_rgba(224,222,221,0.8)] w-21 h-16 inset-shadow-sm inset-shadow-black ">AC</button>
+          <button onclick="loadfunc(this)"
+            class="rounded-xl bg-black/70 shadow-[0px_0px_10px_2px_rgba(224,222,221,0.8)] w-21 h-16 inset-shadow-sm inset-shadow-black text-white">/</button>
+          <button onclick="loadfunc(this)"
+            class="rounded-xl bg-black/70 text-white shadow-[0px_0px_10px_2px_rgba(224,222,221,0.8)] w-21 h-16 inset-shadow-sm inset-shadow-black">%</button>
+          <button onclick="del()"
+            class="box rounded-xl bg-black/70 text-white shadow-[0px_0px_10px_2px_rgba(224,222,221,0.8)] w-21 h-16 inset-shadow-sm inset-shadow-black ">⌫</button>
+        </div>
+        <div class=" py-3 second-row flex gap-3">
+          <button onclick="loadfunc(this)"
+            class="rounded-xl bg-white shadow-[0px_0px_10px_2px_rgba(224,222,221,0.8)] w-21 h-16 inset-shadow-sm inset-shadow-black ">7</button>
+          <button onclick="loadfunc(this)"
+            class="rounded-xl bg-white shadow-[0px_0px_10px_2px_rgba(224,222,221,0.8)] w-21 h-16 inset-shadow-sm inset-shadow-black">8</button>
+          <button onclick="loadfunc(this)"
+            class="rounded-xl bg-white shadow-[0px_0px_10px_2px_rgba(224,222,221,0.8)] w-21 h-16 inset-shadow-sm inset-shadow-black ">9</button>
+          <button onclick="loadfunc(this)"
+            class="box rounded-xl bg-black/70 text-white shadow-[0px_0px_10px_2px_rgba(224,222,221,0.8)] w-21 h-16 inset-shadow-sm inset-shadow-black">*</button>
+        </div>
+        <div class=" py-3 first-row flex gap-3">
+          <button onclick="loadfunc(this)"
+            class="rounded-xl bg-white shadow-[0px_0px_10px_2px_rgba(224,222,221,0.8)] w-21 h-16 inset-shadow-sm inset-shadow-black">4</button>
+          <button onclick="loadfunc(this)"
+            class="rounded-xl bg-white shadow-[0px_0px_10px_2px_rgba(224,222,221,0.8)] w-21 h-16 inset-shadow-sm inset-shadow-black">5</button>
+          <button onclick="loadfunc(this)"
+            class="rounded-xl bg-white shadow-[0px_0px_10px_2px_rgba(224,222,221,0.8)] w-21 h-16 inset-shadow-sm inset-shadow-black">6</button>
+
+          <button onclick="loadfunc(this)"
+            class="rounded-xl bg-black/70  text-white shadow-[0px_0px_10px_2px_rgba(224,222,221,0.8)] w-21 h-16 inset-shadow-sm inset-shadow-black">-</button>
+        </div>
+        <div class=" py-3 last-row flex gap-3">
+          <button onclick="loadfunc(this)"
+            class="rounded-xl bg-white shadow-[0px_0px_10px_2px_rgba(224,222,221,0.8)] w-21 h-16 inset-shadow-sm inset-shadow-black">1</button>
+          <button onclick="loadfunc(this)"
+            class="rounded-xl bg-white shadow-[0px_0px_10px_2px_rgba(224,222,221,0.8)] w-21 h-16 inset-shadow-sm inset-shadow-black">2</button>
+          <button onclick="loadfunc(this)"
+            class="rounded-xl bg-white shadow-[0px_0px_10px_2px_rgba(224,222,221,0.8)] w-21 h-16 inset-shadow-sm inset-shadow-black">3</button>
+          <button onclick="loadfunc(this)"
+            class="rounded-xl bg-black/70 text-white shadow-[0px_0px_10px_2px_rgba(224,222,221,0.8)] w-21 h-16 inset-shadow-sm inset-shadow-black">+</button>
+        </div>
+        <div class=" py-3 flex gap-3  ">
+          <button onclick="loadfunc(this)" id="add"
+            class="rounded-xl bg-white shadow-[0px_0px_10px_2px_rgba(224,222,221,0.8)] w-44 h-16 inset-shadow-sm inset-shadow-black">0</button>
+          <button onclick="loadfunc(this)"
+            class="rounded-xl bg-white shadow-[0px_0px_10px_2px_rgba(224,222,221,0.8)] w-21 h-16 inset-shadow-sm inset-shadow-black">.</button>
+          <button onclick="calculate()"
+            class="box rounded-xl bg-blue-400 shadow-[0px_0px_10px_2px_rgba(224,222,221,0.8)] w-21 h-16 inset-shadow-sm inset-shadow-black">=</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+  <script>
+    let count = 0;
+
+    function increase() {
+      count++;
+      document.getElementById("count").innerText = count;
+    }
+
+    function changeColor() {
+      const colors = ["#ff9a9e", "#a18cd1", "#fbc2eb", "#84fab0"];
+      let random = colors[Math.floor(Math.random() * colors.length)];
+      document.body.style.background = random;
+    }
+
+    function updateClock() {
+      const now = new Date();
+
+      let hours = now.getHours();
+      let minutes = now.getMinutes();
+      let seconds = now.getSeconds();
+
+      // AM / PM
+      let session = "AM";
+      if (hours >= 12) {
+        session = "PM";
+      }
+
+      // Convert to 12-hour format
+      if (hours > 12) {
+        hours = hours - 12;
+      }
+
+      // Add leading zero
+      hours = hours < 10 ? "0" + hours : hours;
+      minutes = minutes < 10 ? "0" + minutes : minutes;
+      seconds = seconds < 10 ? "0" + seconds : seconds;
+
+      // Time format
+      const time = `${hours}:${minutes}:${seconds} ${session}`;
+      document.getElementById("clock").innerText = time;
+
+      // Greeting
+      let greetingText = "";
+      if (now.getHours() < 12) {
+        greetingText = "Good Morning 🌅";
+      } else if (now.getHours() < 18) {
+        greetingText = "Good Afternoon ☀️";
+      } else {
+        greetingText = "Good Evening 🌙";
+      }
+
+      document.getElementById("greeting").innerText = greetingText;
+
+      // Date
+      const date = now.toDateString();
+      document.getElementById("date").innerText = date;
+    }
+
+    // Run every second
+    setInterval(updateClock, 1000);
+
+    // Run once immediately
+    updateClock();
+
+    const inputd = document.getElementById("inputdisplay");
+    const add = document.getElementById("add");
+    const allclear = document.getElementById("allclear");
+
+    function loadfunc(ele) {
+      inputd.value += ele.innerHTML;
+      ele.classList.add("scale-95");
+      setTimeout(() => {
+        ele.classList.remove("scale-95");
+      }, 150);
+    }
+    function calculate() {
+      inputd.value = eval(inputd.value);
+    }
+    function del() {
+      inputd.value = inputd.value.slice(0, -1);
+    }
+    function alldel() {
+      inputd.value = inputd.value.slice(0, 0);
+    }
+
+  </script>
+</body>
+
+</html>

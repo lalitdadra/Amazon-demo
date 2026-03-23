@@ -1,0 +1,35 @@
+body {
+  font-family: Arial;
+  background: lightblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.weather-box {
+    border-color: brown;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  background-color: rgb(255 255 255 / 10%);
+  backdrop-filter: blur(10px);
+}
+input {
+  padding: 10px;
+  background-color: transparent;
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+
+}
+input:focus {
+  outline: none;
+}
+button {
+  padding: 10px;
+  margin-left: 10px;
+  border-radius: 10px;
+  border-color: black;
+  background-color: transparent;
+
+  /* background-color: rgb(255, 255, 255 /10%); */
+}
