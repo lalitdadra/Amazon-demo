@@ -10,6 +10,7 @@ function loadtask() {
         const li = document.createElement("li");
         li.innerText = entertask.value;
         tasklist.appendChild(li);
+        li.classList.add('list-decimal', 'ml-5');
         console.log(entertask.value);
         entertask.value = "";
     }
